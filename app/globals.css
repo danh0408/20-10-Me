@@ -1,26 +1,59 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+body {
+  font-family: Arial, sans-serif;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #111827, #1e3a8a);
+  color: rgb(228, 15, 15);
+  text-align: center;
+}
+.container {
+  padding: 40px;
+}
+h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+p {
+  font-size: 18px;
+  line-height: 1.7;
+}
+.loading {
+  display: flex;
+  justify-content: center;
+  gap: 10px ;
+  margin: 30px 0 ;
+}
+.loading span {
+  width: 12px;
+  height: 12px;
+  background: white;
+  border-radius: 50%;
+  animation: loading 1s infinite alternate;
+}
+.loading span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+@keyframes loading {
+  from {
+    opacity: 0.2;
+    transform: translateY(0);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(-10px);
   }
 }
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.copyright {
+  margin-top: 300;
+  font-size: 14px;
+  opacity: 0.6;
 }
