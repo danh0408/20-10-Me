@@ -194,7 +194,7 @@ export default function Home() {
         </div>
       </section>
       <audio ref={audioRef} id="bgMusic" loop preload="none">
-        <source src="/music/Loibaihat1.m4a" type="audio/mpeg" />
+        <source src="/music/Loibaihat2.m4a" type="audio/mpeg" />
       </audio>
       <footer>Được làm bằng tất cả tình yêu dành cho mẹ ❤️</footer>
     </>
